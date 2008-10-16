@@ -85,7 +85,8 @@ static struct sdram_params sdram_tbl[] __initdata = {
 	}, {    /* Samsung K4S281632B-1H */
 	        .name           = "K4S281632B-1H",
 		.rows           = 12,
-		.tck            = 10,
+		.tck            = 8,
+		.trcd           = 20,
 		.trp            = 20,
 		.twr            = 10,
 		.refresh        = 64000,
@@ -142,7 +143,7 @@ static void
 sdram_calculate_timing(struct sdram_info *sd, u_int cpu_khz,
 		       struct sdram_params *sdram)
 {
-	u_int mem_khz, sd_khz, trp, twr;
+	u_int mem_khz, sd_khz, trp, twr, rcd;
 
 	mem_khz = cpu_khz / 2;
 	sd_khz = mem_khz;
@@ -180,8 +181,14 @@ sdram_calculate_timing(struct sdram_info *sd, u_int cpu_khz,
 	if (sd_khz != mem_khz)
 		sd->mdrefr |= MDREFR_K1DB2;
 
+	rcd = ns_to_cycles(sdram->trcd, mem_khz);
+
+#ifdef CONFIG_SA1100_JORNADA720
+	/* Jornada 720 memory doesn't like trcd of 1 */
+	if(rcd < 2) rcd = 2;
+#endif
 	/* initial number of '1's in MDCAS + 1 */
-	set_mdcas(sd->mdcas, sd_khz >= 62000, ns_to_cycles(sdram->trcd, mem_khz));
+	set_mdcas(sd->mdcas, sd_khz >= 62000, rcd);
 
 #ifdef DEBUG
 	printk("MDCNFG: %08x MDREFR: %08x MDCAS0: %08x MDCAS1: %08x MDCAS2: %08x\n",

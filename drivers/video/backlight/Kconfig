@@ -66,3 +66,24 @@ config BACKLIGHT_HP680
 	  If you have a HP Jornada 680, say y to enable the
 	  backlight driver.
 
+config BACKLIGHT_JORNADA720
+	tristate "HP Jornada 720 Backlight Driver"
+	depends on BACKLIGHT_DEVICE && SA1100_JORNADA720_MCU
+	default y
+	help
+	  If you have a HP Jornada 7xx, say y to enable the
+	  backlight driver.
+	  
+	  To compile this driver as a module, choose M here: the
+	  module will be called jornada720_bl.
+
+config LCD_JORNADA720
+	tristate "HP Jornada 720 LCD control"
+	depends on LCD_DEVICE && SA1100_JORNADA720_MCU
+	default y
+	help
+	  If you have a HP Jornada 7xx, say y to be able to
+	  set contrast and power state of the LCD.
+	  
+	  To compile this driver as a module, choose M here: the
+	  module will be called jornada720_lcd.

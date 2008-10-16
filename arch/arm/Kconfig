@@ -729,7 +729,7 @@ config CPU_FREQ_SA1100
 
 config CPU_FREQ_SA1110
 	bool
-	depends on CPU_FREQ && (SA1100_ASSABET || SA1100_CERF || SA1100_PT_SYSTEM3)
+	depends on CPU_FREQ && (SA1100_ASSABET || SA1100_CERF || SA1100_PT_SYSTEM3 || SA1100_JORNADA720)
 	default y
 
 config CPU_FREQ_INTEGRATOR
@@ -847,6 +847,17 @@ config APM
 	  random kernel OOPSes or reboots that don't seem to be related to
 	  anything, try disabling/enabling this option (or disabling/enabling
 	  APM in your BIOS).
+
+config SA1100_JORNADA720_APM
+	tristate "Jornada 720 battery status reporting"
+	depends on SA1100_JORNADA720_MCU && APM
+	help
+	  Say Y here if you have a HP Jornada 7xx handheld computer and you
+	  want to be able to read battery status.
+
+	  To compile this driver as a module choose M here: the
+	  module will be called jornada720_apm.
+
 
 endmenu
 

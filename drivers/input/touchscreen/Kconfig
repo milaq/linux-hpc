@@ -144,4 +144,14 @@ config TOUCHSCREEN_TOUCHWIN
 	  To compile this driver as a module, choose M here: the
 	  module will be called touchwin.
 
+config TOUCHSCREEN_JORNADA720
+	tristate "HP Jornada 720 touchscreen support"
+	depends on SA1100_JORNADA720_MCU
+	help
+	  Say Y here if you are using a HP Jornada 7xx (710/720/728) PDA
+	  and want to use the touchscreen.
+	  
+	  To compile this driver as a module choose M here: the
+	  module will be called jornada720_ts.
+
 endif

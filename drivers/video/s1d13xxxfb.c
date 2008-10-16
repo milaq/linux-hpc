@@ -540,7 +540,7 @@ s1d13xxxfb_probe(struct platform_device *pdev)
 	int ret = 0;
 	u8 revision;
 
-	dbg("probe called: device is %p\n", dev);
+	dbg("probe called: device is %p\n", pdev);
 
 	printk(KERN_INFO "Epson S1D13XXX FB Driver\n");
 

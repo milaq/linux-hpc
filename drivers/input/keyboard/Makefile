@@ -17,4 +17,5 @@ obj-$(CONFIG_KEYBOARD_SPITZ)		+= spitzkbd.o
 obj-$(CONFIG_KEYBOARD_HIL)		+= hil_kbd.o
 obj-$(CONFIG_KEYBOARD_HIL_OLD)		+= hilkbd.o
 obj-$(CONFIG_KEYBOARD_OMAP)             += omap-keypad.o
+obj-$(CONFIG_KEYBOARD_JORNADA720)	+= jornada720_kbd.o
 

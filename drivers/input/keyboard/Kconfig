@@ -203,4 +203,15 @@ config KEYBOARD_OMAP
 	  To compile this driver as a module, choose M here: the
 	  module will be called omap-keypad.
 
+config KEYBOARD_JORNADA720
+	tristate "HP Jornada 720 Keyboard Support"
+	depends on SA1100_JORNADA720_MCU
+	default y
+	help
+	  Say Y to enable keyboard on the hewlett Packard Jornada
+	  7xx(710/720/728) series of PDAs.
+
+	  To compile this driver as a module choose M here: the
+	  module will be called jornada720_kbd.
+
 endif

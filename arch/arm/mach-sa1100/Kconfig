@@ -101,6 +101,17 @@ config SA1100_JORNADA720
 	  handheld computer.  See <http://www.hp.com/jornada/products/720>
 	  for details.
 
+config SA1100_JORNADA720_MCU
+	tristate "HP Jornada 720 Microprocessor Controller Unit"
+	depends on SA1100_JORNADA720
+	help
+	  Say Y here if you have a HP Jornada 7xx handheld computer and you
+	  want to access devices connected by the MCU. Those include the
+	  keyboard, touchscreen, backlight and battery.
+
+	  To compile this driver as a module choose M here: the
+	  module will be called jornada720_mcu.
+
 config SA1100_HACKKIT
 	bool "HackKit Core CPU Board"
 	help

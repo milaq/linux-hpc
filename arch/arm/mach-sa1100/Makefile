@@ -31,6 +31,8 @@ obj-$(CONFIG_SA1100_HACKKIT)		+= hackkit.o
 led-$(CONFIG_SA1100_HACKKIT)		+= leds-hackkit.o
 
 obj-$(CONFIG_SA1100_JORNADA720)		+= jornada720.o
+obj-$(CONFIG_SA1100_JORNADA720_MCU)	+= jornada720_mcu.o
+obj-$(CONFIG_SA1100_JORNADA720_APM)	+= jornada720_apm.o
 
 obj-$(CONFIG_SA1100_LART)		+= lart.o
 led-$(CONFIG_SA1100_LART)		+= leds-lart.o
