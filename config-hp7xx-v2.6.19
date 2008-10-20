@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
-# Linux kernel version: 2.6.19-jlime
-# Sat Aug 16 22:03:15 2008
+# Linux kernel version: 2.6.19-hpc
+# Mon Oct 20 22:52:39 2008
 #
 CONFIG_ARM=y
 # CONFIG_GENERIC_TIME is not set
@@ -27,7 +27,7 @@ CONFIG_INIT_ENV_ARG_LIMIT=32
 #
 # General setup
 #
-CONFIG_LOCALVERSION="-hp7xx"
+CONFIG_LOCALVERSION=""
 # CONFIG_LOCALVERSION_AUTO is not set
 CONFIG_SWAP=y
 CONFIG_SYSVIPC=y
