@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # Linux kernel version: 2.6.19
-# Sun May 17 16:04:30 2009
+# Sun May 17 16:28:35 2009
 #
 CONFIG_ARM=y
 # CONFIG_GENERIC_TIME is not set
@@ -27,7 +27,7 @@ CONFIG_INIT_ENV_ARG_LIMIT=32
 #
 # General setup
 #
-CONFIG_LOCALVERSION=""
+CONFIG_LOCALVERSION="-hpc"
 # CONFIG_LOCALVERSION_AUTO is not set
 CONFIG_SWAP=y
 CONFIG_SYSVIPC=y
@@ -579,7 +579,7 @@ CONFIG_FIB_RULES=y
 # Generic Driver Options
 #
 CONFIG_STANDALONE=y
-CONFIG_PREVENT_FIRMWARE_BUILD=y
+# CONFIG_PREVENT_FIRMWARE_BUILD is not set
 CONFIG_FW_LOADER=y
 # CONFIG_SYS_HYPERVISOR is not set
 
