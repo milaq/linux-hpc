@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
-# Linux kernel version: 2.6.19-jlime
-# Sat Aug 16 15:53:52 2008
+# Linux kernel version: 2.6.19
+# Tue Nov 17 19:16:58 2009
 #
 CONFIG_ARM=y
 # CONFIG_GENERIC_TIME is not set
@@ -230,8 +230,9 @@ CONFIG_CMDLINE=""
 #
 # At least one emulation must be selected
 #
-# CONFIG_FPE_NWFPE is not set
-CONFIG_FPE_FASTFPE=y
+CONFIG_FPE_NWFPE=y
+# CONFIG_FPE_NWFPE_XP is not set
+# CONFIG_FPE_FASTFPE is not set
 
 #
 # Userspace binary formats
