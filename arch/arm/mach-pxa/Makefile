@@ -18,6 +18,8 @@ obj-$(CONFIG_PXA_SHARP_Cxx00)	+= spitz.o corgi_ssp.o corgi_lcd.o sharpsl_pm.o sp
 obj-$(CONFIG_MACH_AKITA)	+= akita-ioexp.o
 obj-$(CONFIG_MACH_POODLE)	+= poodle.o corgi_ssp.o
 obj-$(CONFIG_MACH_TOSA)         += tosa.o
+obj-$(CONFIG_ARCH_MP900C) += mp900.o
+
 
 # Support for blinky lights
 led-y := leds.o

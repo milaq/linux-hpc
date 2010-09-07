@@ -214,4 +214,12 @@ config KEYBOARD_JORNADA720
 	  To compile this driver as a module choose M here: the
 	  module will be called jornada720_kbd.
 
+config KEYBOARD_MP900
+	tristate "Mobilepro 900/c keyboard and touchscreen support"
+	depends on ARCH_MP900C
+	default y
+	help
+	   Provides keyboard and touchscreen support for the
+	   Nec Mobilepro 900/C
+
 endif

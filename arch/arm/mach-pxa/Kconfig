@@ -5,6 +5,11 @@ menu "Intel PXA2xx Implementations"
 choice
 	prompt "Select target board"
 
+config ARCH_MP900C
+	bool "Nec Mobilepro 900/c"
+	depends on ARCH_PXA
+	select PXA25x
+
 config ARCH_LUBBOCK
 	bool "Intel DBPXA250 Development Platform"
 	select PXA25x
